@@ -7,23 +7,24 @@ const MindAr = () => {
 
   useEffect(() => {
     const sceneEl = sceneRef.current;
-    const arSystem = sceneEl.systems["mindar-image-system"];
     sceneEl.addEventListener('renderstart', () => {
-      const sceneEl = sceneRef.current;
       const arSystem = sceneEl.systems["mindar-image-system"];
       if (arSystem) {
         arSystem.start();
       }
     });
     return () => {
-      arSystem.stop();
+      const arSystem = sceneEl.systems["mindar-image-system"];
+      if (arSystem) {
+        arSystem.stop();
+      }
     }
-  }, [sceneRef]);
+  }, []);
 
   return (
-    <a-scene ref={sceneRef} mindar-image="imageTargetSrc: ./pysanka.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;" color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene ref={sceneRef} mindar-image={`imageTargetSrc: /pysanka.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <a-asset-item id="pysankaModel" src="./pysanka_v2-02.gltf"></a-asset-item>
+        <a-asset-item id="pysankaModel" src="/pysanka_v2-02.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
