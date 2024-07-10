@@ -15,23 +15,25 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Mesh_0"
+			"name":"Pysanka"
 		}
 	],
 	"materials":[
 		{
-			"name":"Material_0",
+			"doubleSided":true,
+			"name":"PysankaBase",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
 				},
-				"metallicFactor":0
+				"metallicFactor":0,
+				"roughnessFactor":0.5
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Mesh_0",
+			"name":"Pysanka",
 			"primitives":[
 				{
 					"attributes":{
@@ -53,68 +55,70 @@
 	],
 	"images":[
 		{
-			"uri":"textures/1.png"
+			"mimeType":"image/png",
+			"name":"Pysanka_diffuse.png",
+			"uri":"./Pysanka_diffuse.png"
 		}
 	],
 	"accessors":[
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":1524,
+			"count":486,
 			"max":[
-				6.598043918609619,
-				9.189632415771484,
-				6.59591817855835
+				1,
+				2.5695440769195557,
+				1
 			],
 			"min":[
-				-6.598042964935303,
-				-6.923145771026611,
-				-6.59591817855835
+				-1,
+				0,
+				-1
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":1524,
+			"count":486,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":1524,
+			"count":486,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":1848,
+			"count":2304,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":18288,
+			"byteLength":5832,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":18288,
-			"byteOffset":18288,
+			"byteLength":5832,
+			"byteOffset":5832,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":12192,
-			"byteOffset":36576,
+			"byteLength":3888,
+			"byteOffset":11664,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3696,
-			"byteOffset":48768,
+			"byteLength":4608,
+			"byteOffset":15552,
 			"target":34963
 		}
 	],
@@ -126,8 +130,8 @@
 	],
 	"buffers":[
 		{
-			"byteLength":52464,
-			"uri":"seperate.bin"
+			"byteLength":20160,
+			"uri":"pysanka_v2-02.bin"
 		}
 	]
 }
