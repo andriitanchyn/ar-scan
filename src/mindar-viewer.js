@@ -27,7 +27,7 @@ const MindAr = () => {
         <a-asset-item id="pysankaModel" src="/pysanka_v2-02.gltf"></a-asset-item>
       </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-camera position="0 0 0"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
         <a-gltf-model rotation="0 90 0" scale="0.2 0.2 0.2" position="0 0 0" src="#pysankaModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>

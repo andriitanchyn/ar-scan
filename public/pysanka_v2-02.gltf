@@ -56,8 +56,8 @@
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"Pysanka_diffuse.png",
-			"uri":"pysanka_diffuse.png"
+			"name":"Pysanka_diffuse_001.png",
+			"uri":"Pysanka_diffuse.png"
 		}
 	],
 	"accessors":[
