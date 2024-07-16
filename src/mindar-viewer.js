@@ -24,7 +24,7 @@ const MindAr = () => {
   return (
     <a-scene ref={sceneRef} mindar-image={`imageTargetSrc: pysanka.mind; filterBeta: 0.001; autoStart: false; uiLoading: no; uiError: no; uiScanning: yes;`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <a-asset-item id="pysankaModel" src="pysanka_v2-02.gltf"></a-asset-item>
+        <a-asset-item id="pysankaModel" src="pysanka_v2-04.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0"></a-camera>
