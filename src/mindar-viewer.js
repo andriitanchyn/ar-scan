@@ -30,7 +30,7 @@ const MindAr = () => {
       <a-camera position="0 0 0"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 90 0" scale="0.2 0.2 0.2" position="0 0 0" src="#pysankaModel"></a-gltf-model>
+        <a-gltf-model rotation="0 90 0" scale="0.3 0.3 0.3" position="0 -0.3 0" src="#pysankaModel"></a-gltf-model>
       </a-entity>
     </a-scene>
   )
