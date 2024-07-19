@@ -23,21 +23,20 @@ const MindAr = () => {
 
   return (
     <>
-      <a-scene ref={sceneRef} mindar-image={`imageTargetSrc: targetsAll2.mind; filterBeta: 0; autoStart: false; uiLoading: no; uiError: no; uiScanning: yes;`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-scene ref={sceneRef} mindar-image={`imageTargetSrc: targetsAll.mind; filterBeta: 0; autoStart: false; uiLoading: no; uiError: no; uiScanning: yes;`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
           <a-asset-item id="pysankaModel" src="pysanka_v2-04.gltf"></a-asset-item>
-          <a-asset-item id="targetModel" src="Clay_tablet_001.gltf"></a-asset-item>
+          <a-asset-item id="targetModel" src="Clay_tablet.gltf"></a-asset-item>
         </a-assets>
 
         <a-camera position="0 0 0"></a-camera>
 
         <a-entity mindar-image-target="targetIndex: 0">
-          <a-gltf-model rotation="0 0 0"scale="0.2 0.2 0.2" position="0 -0.25 0" src="#targetModel"></a-gltf-model>
+          <a-gltf-model rotation="0 -90 0"scale="0.5 0.5 0.5" position="0 -0.5 0" src="#targetModel"></a-gltf-model>
         </a-entity>
         <a-entity mindar-image-target="targetIndex: 1">
           <a-gltf-model rotation="0 90 0" scale="0.3 0.3 0.3" position="0 -0.3 0" src="#pysankaModel"></a-gltf-model>
         </a-entity>
-
       </a-scene>
     </>
     
