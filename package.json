@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "aframe": "^1.4.2",
+    "aframe-extras": "^7.5.0",
     "mind-ar": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
