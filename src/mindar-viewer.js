@@ -7,32 +7,29 @@ import 'mind-ar/dist/mindar-image-aframe.prod.js';
 const MindAr = () => {
   const sceneRef = useRef(null);
 
-  // const showWax = () => {
-  //   const wax = document.querySelector("#wax-panel");
+  const showTarget5Video = () => {
+    const panel = document.querySelector("#target5-panel");
 
-  //   wax.setAttribute("visible", true);
-      
-  //   document.querySelector("#wax-video-link").setAttribute("src", "#waxsource");
-
-  //   wax.setAttribute("position", "0 " + 0 + " -0.01");
-  // }
+    panel.setAttribute("visible", true);
+    panel.setAttribute("position", "0 " + 0 + " -0.01");
+  }
 
 
-  // useEffect(()=> {
-  //   // eslint-disable-next-line no-undef
-  //   AFRAME.registerComponent('waxtarget', {
-  //     init: function () {
-  //       this.el.addEventListener('targetFound', event => {
-  //         console.log("target found");
-  //         showWax();
+  useEffect(()=> {
+    // eslint-disable-next-line no-undef
+    AFRAME.registerComponent('knottarget', {
+      init: function () {
+        this.el.addEventListener('targetFound', event => {
+          console.log("target found", event);
+          showTarget5Video();
           
-  //       });
-  //       this.el.addEventListener('targetLost', event => {
-  //         console.log("target lost");
-  //       });
-  //     }
-  //   });
-  // }, []);
+        });
+        this.el.addEventListener('targetLost', event => {
+          console.log("target lost");
+        });
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const sceneEl = sceneRef.current;
@@ -52,16 +49,16 @@ const MindAr = () => {
 
   return (
     <>
-      <a-scene inspector="url: http://localhost:3333/dist/aframe-inspector.js" ref={sceneRef} mindar-image={`imageTargetSrc: target5.mind; filterBeta: 0; autoStart: false; uiLoading: no; uiError: no; uiScanning: yes;`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-scene inspector="url: http://localhost:3333/dist/aframe-inspector.js" ref={sceneRef} mindar-image={`imageTargetSrc: target10.mind; filterBeta: 0; autoStart: false; uiLoading: no; uiError: no; uiScanning: yes;`} color-space="sRGB" embedded renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets timeout="100">
-          <a-asset-item id="pysankaModel" src="pysanka_v2-04.gltf"></a-asset-item>
-          <a-asset-item id="clayModel" src="Clay_tablet.gltf"></a-asset-item>
-          <a-asset-item id="flopyModel" src="Floppy_disc.gltf"></a-asset-item>
-          <a-asset-item id="caveModel" src="Cave_painting.gltf"></a-asset-item>
-          <a-asset-item id="waxModel" src="tablet_02.gltf"></a-asset-item>
-          {/* <a-asset-item id="waxsource" src="tablet_02.gltf"></a-asset-item> */}
+          <a-asset-item id="clayModel" src="targets/0/target0.gltf"></a-asset-item>
+          <a-asset-item id="pysankaModel" src="targets/1/target1.gltf"></a-asset-item>
+          <a-asset-item id="flopyModel" src="targets/2/target2.gltf"></a-asset-item>
+          <a-asset-item id="caveModel" src="targets/3/target3.gltf"></a-asset-item>
+          <a-asset-item id="waxModel" src="targets/4/target4.gltf"></a-asset-item>
+  
 
-          {/* <video crossOrigin="anonymous" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" id="waxsource"></video> */}
+          <video id="knotmodel" loop={true} crossOrigin="anonymous" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
         </a-assets>
 
         <a-camera position="0 0 0"></a-camera>
@@ -80,18 +77,13 @@ const MindAr = () => {
         </a-entity>
         <a-entity id="waxtarget" waxtarget="" mindar-image-target="targetIndex: 4">
           <a-gltf-model rotation="0 0 0" scale="0.2 0.2 0.2" position="0 -0.1 0" src="#waxModel" animation-mixer="clip: *; loop: once; clampWhenFinished: true; startAt: -2500;"></a-gltf-model>
-
-          {/* <a-entity visible="false" id="wax-panel" position="0 0 -0.01">
+        </a-entity>
+        <a-entity id="knottarget" knottarget="" mindar-image-target="targetIndex: 5">
+          <a-entity visible="false" id="target5-panel" position="0 0  -0.01">
             <a-entity>
-              <a-gltf-model id="wax-video-link" rotation="0 0 0" scale="0.2 0.2 0.2" position="0 -0.1 0" animation-mixer="clip: *; loop: once; clampWhenFinished: true;"></a-gltf-model>
+              <a-video id="target5-video-link" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" width="1" height="0.552" position="0 0 0"></a-video>
+              </a-entity>
             </a-entity>
-          </a-entity> */}
-
-          {/* <a-entity visible="false" id="wax-panel" position="0 0 -0.01">
-            <a-entity>
-              <a-video id="wax-video-link" webkit-playsinline="" playsinline="" width="1" height="0.552" position="0 0 0" material="" geometry=""></a-video>
-            </a-entity>
-          </a-entity> */}
         </a-entity>
       </a-scene>
     </>
