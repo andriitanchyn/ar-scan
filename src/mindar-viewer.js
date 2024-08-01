@@ -11,7 +11,7 @@ const MindAr = () => {
     const panel = document.querySelector("#target5-panel");
 
     panel.setAttribute("visible", true);
-    panel.setAttribute("position", "0 " + 0 + " -0.01");
+    panel.setAttribute("position", "0 0 -0.01");
   }
 
 
@@ -56,9 +56,6 @@ const MindAr = () => {
           <a-asset-item id="flopyModel" src="targets/2/target2.gltf"></a-asset-item>
           <a-asset-item id="caveModel" src="targets/3/target3.gltf"></a-asset-item>
           <a-asset-item id="waxModel" src="targets/4/target4.gltf"></a-asset-item>
-  
-
-          <video id="knotmodel" loop={true} crossOrigin="anonymous" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
         </a-assets>
 
         <a-camera position="0 0 0"></a-camera>
@@ -79,9 +76,9 @@ const MindAr = () => {
           <a-gltf-model rotation="0 0 0" scale="0.2 0.2 0.2" position="0 -0.1 0" src="#waxModel" animation-mixer="clip: *; loop: once; clampWhenFinished: true; startAt: -2500;"></a-gltf-model>
         </a-entity>
         <a-entity id="knottarget" knottarget="" mindar-image-target="targetIndex: 5">
-          <a-entity visible="false" id="target5-panel" position="0 0  -0.01">
+          <a-entity visible="false" id="target5-panel" position="0 0 -0.01">
             <a-entity>
-              <a-video id="target5-video-link" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" width="1" height="0.552" position="0 0 0"></a-video>
+              <a-video id="target5-video-link" src="targets/5/01.mp4" width="1" height="0.552" position="0 0 0"></a-video>
               </a-entity>
             </a-entity>
         </a-entity>
