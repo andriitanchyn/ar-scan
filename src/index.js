@@ -1,6 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import 'three';
+import 'aframe';
+import 'aframe-extras';
+import 'mind-ar/dist/mindar-image-aframe.prod.js';
+import './video';
 import App from './App';
 
 const container = document.getElementById('root');

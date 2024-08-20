@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="container">
       <MindAr/>
-      <video></video>
+      {/* <video></video> */}
     </div>
   );
 }
