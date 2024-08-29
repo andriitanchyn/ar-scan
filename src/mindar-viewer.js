@@ -44,7 +44,7 @@ const MindAr = () => {
           <a-asset-item id="019" src="targets/019/019.gltf"></a-asset-item>
         </a-assets>
 
-        <a-camera position="0 0 0"></a-camera>
+        <a-camera position="0 0 0" touchEnabled="false" wasd-controls-enabled="false" look-controls-enabled="false"></a-camera>
 
         <a-entity mindar-image-target="targetIndex: 0">
           <a-gltf-model rotation="0 0 0" position="0 0 0" src="#001"></a-gltf-model>
