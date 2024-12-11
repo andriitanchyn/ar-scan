@@ -1,5 +1,18 @@
 import * as assets from './assets.json';
 
+export const whiteList = [
+  '005',
+  '006',
+  '007',
+  '008',
+  '010',
+  '011',
+  '013',
+  '014',
+  '015',
+  '016',
+  '019',
+]
 const showTargetVideo = (id, el) => {
   const video = document.querySelector(`[id="${id}"]`);
 
